@@ -1,0 +1,175 @@
+body {
+    background-color: #091c34;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #3a4e7a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navlist li {
+    float: left;
+}
+
+.navlist li a {
+    display: block;
+    color: #e8e8e6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3a4e7a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #3a4e7a; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-box {
+    margin-top: 8px;
+    margin-right: 20px;
+}
+
+.search-bar {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 300px;
+}
+.filmbox {
+    /* border: 3px solid black; */
+    width: 90%;
+    margin: auto;
+    height: 500px;
+    margin-top: 50px;
+    display: flex;
+}
+.leftinformation {
+    /* border: 3px solid black; */
+    align-items: left;
+    height: 500px;
+    width: 40%;
+}
+.rightphoto {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+#jujutsu {
+    color: #e8e8e6;
+    font-size: 50px;
+    /* text-align: center; */
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-left: 47px;
+}
+#season {
+    color: #e8e8e6;
+    font-size: 50px;
+    margin-left: 47px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#jujutsutext {
+    color: #e8e8e6;
+    font-size: 20px;
+    text-align:left;
+    margin-left: 47px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#play {
+    cursor: pointer;
+    background-color: #3a4e7a;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    margin-left: 47px;
+    margin-top: 40px;
+    border: none;
+    color: #e8e8e6;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.filmbox2 {
+    /* border: 3px solid black; */
+    height: 400px;
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+}
+#airinganime , #topwatchedanime, #dubbedanime {
+    color: #e8e8e6;
+    font-size: 40px;
+    text-align:left;
+    margin-left: 110px;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.footer {
+    background-color: #3a4e7a;
+    height:100px;
+    margin-top: 70px;
+}
+.image-container , .image-container1{
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.image-container::-webkit-scrollbar , .image-container1::-webkit-scrollbar  {
+    display: none; 
+}
+
+img {
+    margin-right: 10px;
+}
+.slider-arrow {
+    height: 40px;
+    width: 20px;
+    margin-top: 150px;
+    background-color: #3a4e7a;
+    color: #e8e8e6;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+}
