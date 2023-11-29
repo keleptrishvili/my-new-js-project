@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="box"><br>
+        <div class="text1"><span>Login</span></div><br>
+        <form id="form" novalidate>
+        <div id="email">
+            <label for="email">Email</label><br>
+            <input type="email" id="emailInput" name="email"><br>
+        </div>
+        <span id="alert1" style="display: none; color: red; ">Please enter email</span>
+        <span id="alert2" style="display: none; color: red; ">Please enter Valid email !</span>
+        <div id="password">
+            <label for="password">Password</label><br>
+            <input type="password" id="passwordInput" name="password">
+        </div>
+        <span id="alert3" style="display: none; color: red; ">Please enter password</span>
+        <span id="alert4" style="display: none; color: red; ">Please enter a password that is longer than 8 characters</span><br><br>
+        </form>
+        <button id="submit">submit</button><br>
+    </div>
+    <script src="registrations.js"></script>
+</body>
+</html>

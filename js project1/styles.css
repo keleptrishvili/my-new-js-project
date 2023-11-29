@@ -173,3 +173,8 @@ img {
     font-weight: bold;
     border: none;
 }
+
+.userinfo {
+    display: flex;
+    color: #e8e8e6;
+}

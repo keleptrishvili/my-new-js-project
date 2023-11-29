@@ -31,10 +31,12 @@ function handleImageZoom() {
         image.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.03)'; 
             this.style.transition = 'transform 0.3s ease'; 
+            this.style.filter = 'blur(5px)';
         });
     
         image.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)'; 
+            this.style.filter = 'none';
         });
     });
 }
@@ -82,3 +84,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
