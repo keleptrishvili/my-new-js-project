@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="text1"><span>Sign Up</span></div>
+            <form id="form" novalidate>
+                <div class="input-field">
+                    <label for="firstName">First Name</label><br>
+                    <input type="text" id="firstNameInput" name="firstName">
+                    <span class="alert" id="alertFirstName" style="display: none;">Please enter your first name</span>
+                </div>
+                <div class="input-field">
+                    <label for="lastName">Last Name</label><br>
+                    <input type="text" id="lastNameInput" name="lastName">
+                    <span class="alert" id="alertLastName" style="display: none;">Please enter your last name</span>
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="emailInput" name="email">
+                    <span class="alert" id="alertEmail1" style="display: none;">Please enter an email</span>
+                    <span class="alert" id="alertEmail2" style="display: none;">Please enter a valid email</span>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label><br>
+                    <input type="password" id="passwordInput" name="password">
+                    <span class="alert" id="alertPassword1" style="display: none;">Please enter a password</span>
+                    <span class="alert" id="alertPassword2" style="display: none;">Password must be at least 8 characters long</span>
+                </div>
+                <div class="input-field">
+                    <label for="repeatPassword">Repeat Password</label><br>
+                    <input type="password" id="repeatPasswordInput" name="repeatPassword">
+                    <span class="alert" id="alertRepeatPassword" style="display: none;">Passwords do not match</span>
+                </div>
+            </form>
+            <button id="submit">Submit</button>
+            <div id="congratulationsMessage" style="color: green; margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

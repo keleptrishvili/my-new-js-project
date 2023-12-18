@@ -1,0 +1,74 @@
+{
+    "characters": [
+        {
+            "rank": 1,
+            "name": "Lamperouge, Lelouch",
+            "anime": "Code Geass",
+            "favorites": 167160,
+            "image": "../photos/lelouch 1.jpg"
+        },
+        {
+            "rank": 2,
+            "name": "Levi",
+            "anime": "Attack on Titan",
+            "favorites": 139555,
+            "image": "../photos/levi.jpg"
+        },
+        {
+            "rank": 3,
+            "name": "Monkey D., Luffy",
+            "anime": "One Piece",
+            "favorites": 135740,
+            "image": "../photos/luffy.jpg"
+        },
+        {
+            "rank": 4,
+            "name": "Lawliet, L",
+            "anime": "Death Note",
+            "favorites": 125552,
+            "image": "../photos/L.jpg"
+        },
+        {
+            "rank": 5,
+            "name": "Roronoa, Zoro",
+            "anime": "One Piece",
+            "favorites": 108006,
+            "image": "../photos/zoro.jpg"
+        },
+        {
+            "rank": 6,
+            "name": "Yagami, Light",
+            "anime": "Death Note",
+            "favorites": 95380,
+            "image": "../photos/light.jpg"
+        },
+        {
+            "rank": 7,
+            "name": "Zoldyck, Killua",
+            "anime": "Hunter x Hunter",
+            "favorites": 95059,
+            "image": "../photos/killua.jpg"
+        },
+        {
+            "rank": 8,
+            "name": "Okabe, Rintarou",
+            "anime": "Steins;Gate",
+            "favorites": 93926,
+            "image": "../photos/okabe.jpg"
+        },
+        {
+            "rank": 9,
+            "name": "Elric, Edward",
+            "anime": "Fullmetal Alchemist",
+            "favorites": 86885,
+            "image": "../photos/edward.jpg"
+        },
+        {
+            "rank": 10,
+            "name": "Uzumaki, Naruto",
+            "anime": "Naruto",
+            "favorites": 83327,
+            "image": "../photos/naruto.jpg"
+        }
+    ]
+}

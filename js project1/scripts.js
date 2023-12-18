@@ -85,4 +85,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
- 
+document.addEventListener('DOMContentLoaded', function() {
+    const topAiringContainer = document.querySelector('.filmbox2:nth-of-type(2) .image-container');
+    const mostWatchedContainer = document.querySelector('.filmbox2:nth-of-type(3) .image-container');
+    const dubbedContainer = document.querySelector('.filmbox2:nth-of-type(4) .image-container1');
+
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            data.topAiringAnime.forEach(anime => {
+                const img = document.createElement('img');
+                img.src = anime.src;
+                img.alt = anime.alt;
+                img.style.width = '300px';
+                topAiringContainer.appendChild(img);
+            });
+
+            data.mostWatchedAnime.forEach(anime => {
+                const img = document.createElement('img');
+                img.src = anime.src;
+                img.alt = anime.alt;
+                img.style.width = '300px';
+                mostWatchedContainer.appendChild(img);
+            });
+
+            data.dubbedAnime.forEach(anime => {
+                const img = document.createElement('img');
+                img.src = anime.src;
+                img.alt = anime.alt;
+                img.style.width = '300px';
+                dubbedContainer.appendChild(img);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
