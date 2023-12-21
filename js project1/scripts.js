@@ -14,8 +14,8 @@ function handleHover() {
 function handleClick() {
     const playBtn = document.getElementById('play');
     playBtn.addEventListener('click', function() {
-        this.innerHTML = 'PLAYING...';
-        this.style.backgroundColor = '#4e5a74'; 
+        // this.innerHTML = 'PLAYING...';
+        // this.style.backgroundColor = '#4e5a74'; 
 
         setTimeout(() => {
             this.innerHTML = 'PLAY ON';
@@ -119,3 +119,51 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+
+
+function handleHover() {
+    const playBtn = document.getElementById('play');
+    const bigImage = document.getElementById('bigImage');
+
+    playBtn.addEventListener('mouseenter', function() {
+
+        bigImage.style.filter = 'blur(5px)';
+    });
+
+    playBtn.addEventListener('mouseleave', function() {
+
+        bigImage.style.filter = 'none';
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleHover();
+});
+
+
+function handleImageInfo() {
+    const images = document.querySelectorAll('.filmbox2 img');
+    const infoOverlay = document.querySelector('.info-overlay');
+
+    images.forEach(image => {
+        image.addEventListener('mouseenter', function() {
+            const imageTitle = this.getAttribute('data-title');
+            const imageDescription = this.getAttribute('data-description');
+
+            infoOverlay.querySelector('.info-title').textContent = imageTitle;
+            infoOverlay.querySelector('.info-description').textContent = imageDescription;
+
+            infoOverlay.style.display = 'block';
+        });
+
+        image.addEventListener('mouseleave', function() {
+            infoOverlay.style.display = 'none';
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleImageInfo();
+});
+
+
