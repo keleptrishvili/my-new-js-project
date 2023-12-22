@@ -266,17 +266,20 @@ img {
         display: none;
     }
 
-    .footer {
-        margin-top: 30px;
-    }
-      @media screen and (min-width: 1910px) {
+    @media screen and (min-width: 1910px) {
         .filmbox2 {
-          justify-content: space-around;
+          justify-content: center;
         }
-        
+      
         .filmbox2 .image-container {
-          flex: 1;
-          max-width: 23%;
+          display: flex;
+          justify-content: space-between;
+          width: 80%; 
+          margin: 0 auto; 
+        }
+      
+        .filmbox2 .image-container .image-wrapper {
+          width: 23%; 
         }
       }
 }
