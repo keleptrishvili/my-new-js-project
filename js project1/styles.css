@@ -265,26 +265,18 @@ img {
     .image-container::-webkit-scrollbar, .image-container1::-webkit-scrollbar {
         display: none;
     }
-
     @media screen and (min-width: 1910px) {
         .filmbox2 {
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-wrap: wrap;
+          gap: 20px; 
         }
       
         .filmbox2 .image-container {
-          display: flex;
-          justify-content: space-between;
-          max-width: 80%; 
-          width: 100%;
-          margin: 0 auto; 
-        }
-      
-        .filmbox2 .image-container .image-wrapper {
-          flex: 1;
-          margin: 0 10px; 
-          max-width: 23%; 
+          flex: 0 0 calc(23% - 20px); 
+          max-width: calc(23% - 20px); 
           text-align: center; 
         }
       }
