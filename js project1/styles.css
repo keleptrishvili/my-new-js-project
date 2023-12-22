@@ -278,6 +278,8 @@ img {
           flex: 0 0 calc(23% - 20px); 
           max-width: calc(23% - 20px); 
           text-align: center; 
+          justify-content: center;
+          align-items: center;
         }
       }
       
