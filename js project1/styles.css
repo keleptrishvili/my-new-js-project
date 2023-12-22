@@ -269,6 +269,16 @@ img {
     .footer {
         margin-top: 30px;
     }
+      @media screen and (min-width: 1910px) {
+        .filmbox2 {
+          justify-content: space-around;
+        }
+        
+        .filmbox2 .image-container {
+          flex: 1;
+          max-width: 23%;
+        }
+      }
 }
 
 .info-overlay {
