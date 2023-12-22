@@ -148,12 +148,22 @@ body {
     height:100px;
     margin-top: 70px;
 }
-.image-container , .image-container1{
+.image-container {
     overflow-x: auto;
     white-space: nowrap;
     display: flex;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    width: 100%;
+    text-align: center;
+}
+.image-container1 {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
 }
 
 .image-container::-webkit-scrollbar , .image-container1::-webkit-scrollbar  {
@@ -209,10 +219,12 @@ img {
         white-space: nowrap;
         scrollbar-width: none;
         -ms-overflow-style: none;
+
     }
 
     .image-container::-webkit-scrollbar, .image-container1::-webkit-scrollbar {
         display: none;
+        
     }
 }
 
@@ -265,25 +277,6 @@ img {
     .image-container::-webkit-scrollbar, .image-container1::-webkit-scrollbar {
         display: none;
     }
-    @media screen and (min-width: 1910px) {
-        .filmbox2 {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 20px; 
-          margin-left: 200px;
-        }
-      
-        .filmbox2 .image-container {
-          flex: 0 0 calc(23% - 20px); 
-          max-width: calc(23% - 20px); 
-          text-align: center; 
-          justify-content: center;
-          align-items: center;
-          margin-left: 200px;
-        }
-      }
       
 }
 
