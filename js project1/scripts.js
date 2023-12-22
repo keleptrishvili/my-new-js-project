@@ -31,7 +31,7 @@ function handleImageZoom() {
         image.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.03)'; 
             this.style.transition = 'transform 0.3s ease'; 
-            this.style.filter = 'blur(5px)';
+            this.style.filter = 'blur(15px)';
         });
     
         image.addEventListener('mouseleave', function() {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleImageZoom();
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const imageContainer = document.querySelector('.image-container');
+    const imageContainer = document.querySelector('.image-container1');
     const prevSlideBtn = document.getElementById('prevSlide');
     const nextSlideBtn = document.getElementById('nextSlide');
 
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const topAiringContainer = document.querySelector('.filmbox2:nth-of-type(2) .image-container');
-    const mostWatchedContainer = document.querySelector('.filmbox2:nth-of-type(3) .image-container');
+    const topAiringContainer = document.querySelector('.filmbox2:nth-of-type(2) .image-container1');
+    const mostWatchedContainer = document.querySelector('.filmbox2:nth-of-type(3) .image-container1');
     const dubbedContainer = document.querySelector('.filmbox2:nth-of-type(4) .image-container1');
 
     fetch('data.json')
@@ -121,20 +121,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function handleHover() {
-    const playBtn = document.getElementById('play');
-    const bigImage = document.getElementById('bigImage');
+// function handleHover() {
+//     const playBtn = document.getElementById('play');
+//     const bigImage = document.getElementById('bigImage');
 
-    playBtn.addEventListener('mouseenter', function() {
+//     playBtn.addEventListener('mouseenter', function() {
 
-        bigImage.style.filter = 'blur(5px)';
-    });
+//         bigImage.style.filter = 'blur(5px)';
+//     });
 
-    playBtn.addEventListener('mouseleave', function() {
+//     playBtn.addEventListener('mouseleave', function() {
 
-        bigImage.style.filter = 'none';
-    });
-}
+//         bigImage.style.filter = 'none';
+//     });
+// }
 
 document.addEventListener('DOMContentLoaded', function() {
     handleHover();
@@ -167,3 +167,81 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function handleImageInfo() {
+    const images = document.querySelectorAll('.filmbox2 img');
+
+    images.forEach(image => {
+        const infoOverlay = document.createElement('div');
+        infoOverlay.classList.add('info-overlay');
+
+        const infoTitle = document.createElement('h3');
+        infoTitle.classList.add('info-title');
+
+        const infoDescription = document.createElement('p');
+        infoDescription.classList.add('info-description');
+
+        infoOverlay.appendChild(infoTitle);
+        infoOverlay.appendChild(infoDescription);
+
+        image.parentNode.appendChild(infoOverlay);
+
+        image.addEventListener('mouseenter', function() {
+            const imageTitle = this.getAttribute('data-title');
+            const imageDescription = this.getAttribute('data-description');
+
+            infoTitle.textContent = imageTitle;
+            infoDescription.textContent = imageDescription;
+
+            infoOverlay.style.display = 'block';
+        });
+
+        image.addEventListener('mouseleave', function() {
+            infoOverlay.style.display = 'none';
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleImageInfo();
+});
+function updateTimer() {
+    const countDownDate = new Date('2025-11-31T23:59:59').getTime();
+
+    function calculateTimeRemaining() {
+        const now = new Date().getTime();
+        const difference = countDownDate - now;
+
+        if (difference < 0) {
+            clearInterval(timerInterval);
+            alert("Countdown expired!");
+            return;
+        }
+
+        const time = {
+            years: Math.floor(difference / (1000 * 60 * 60 * 24 * 365)),
+            days: Math.floor((difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        };
+
+        return time;
+    }
+
+    function displayTime() {
+        const time = calculateTimeRemaining();
+
+        if (time) {
+            document.querySelector('.years').innerHTML = time.years + "<br>Years";
+            document.querySelector('.days').innerHTML = time.days + "<br>Days";
+            document.querySelector('.hours').innerHTML = time.hours + "<br>Hours";
+            document.querySelector('.minutes').innerHTML = time.minutes + "<br>Minutes";
+            document.querySelector('.seconds').innerHTML = time.seconds + "<br>Seconds";
+        }
+    }
+
+    const timerInterval = setInterval(displayTime, 1000);
+    displayTime();
+}
+
+updateTimer();

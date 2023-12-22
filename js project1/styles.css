@@ -110,7 +110,7 @@ body {
     margin-top: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#play {
+/* #play {
     cursor: pointer;
     background-color: #3a4e7a;
     border-radius: 10px;
@@ -123,7 +123,7 @@ body {
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-}
+} */
 
 .filmbox2 {
     /* border: 3px solid black; */
@@ -315,3 +315,37 @@ img {
 .image-wrapper:hover .graph-overlay {
     opacity: 1;
 }
+
+
+.timer {
+    /* border: 3px solid black; */
+    height: 200px;
+    width: 500px;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    text-align: center;
+}
+.years, 
+.days , 
+.hours , 
+.minutes , 
+.seconds {
+    height: 70px;
+    width: 50px;
+    gap: 0px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.filmbox3 {
+    /* border: 3px solid black; */
+    width: 90%;
+    margin: auto;
+    height: 400px;
+    margin-top: 50px;
+    display: flex;
+}
+

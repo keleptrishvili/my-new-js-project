@@ -1,0 +1,79 @@
+[
+    {
+      "rank": 1,
+      "title": "Sousou no Frieren PV",
+      "image": "../photos/frieren.jpg",
+      "type": "TV (28 eps)",
+      "score": 9.13
+    },
+
+    {
+        "rank": 2,
+        "title": "Fullmetal Alchemist: Brotherhood",
+        "image": "../photos/fullmetal ranking.jpg",
+        "type": "TV (64 eps)",
+        "score": 9.13
+    },
+
+    {
+        "rank": 3,
+        "title": "Steins;Gate O",
+        "image": "../photos/steins ranking.jpg",
+        "type": "TV (24 eps)",
+        "score": 9.07
+    },
+    {
+      "rank": 4,
+      "title": "Gintama",
+      "image": "../photos/gintama1 ranking.jpg",
+      "type": "TV (51 eps)",
+      "score": 9.06 
+    },
+    {
+      "rank": 5,
+      "title": "Shingeki no Kyojin Season 3 Part 2",
+      "image": "../photos/aot ranking.jpg",
+      "type": "TV (10 eps)",
+      "score": 9.05 
+    },
+    {
+      "rank": 6,
+      "title": "Sennen Kessen-hen",
+      "image": "../photos/bliach ranking.jpg",
+      "type": "TV (13 eps)",
+      "score": 9.04
+    },
+    {
+      "rank": 7,
+      "title": "Gintama':final",
+      "image": "../photos/gintama2 ranking.jpg",
+      "type": "Movie (1 eps)",
+      "score": 9.04
+    },
+    {
+      "rank": 8,
+      "title": "Hunter X Hunter",
+      "image": "../photos/hunter ranking.jpg",
+      "type": "TV (145 eps)",
+      "score": 9.03
+    },
+    {
+      "rank": 9,
+      "title": "Gintama'",
+      "image": "../photos/gintama3 ranking.jpg",
+      "type": "TV (51 eps)",
+      "score": 9.03
+    },
+    {
+      "rank": 10,
+      "title": "Gintama':Enchousen",
+      "image": "../photos/gintama4 ranking.jpg",
+      "type": "TV (13 eps)",
+      "score": 9.02
+    }
+
+
+
+
+  ]
+  

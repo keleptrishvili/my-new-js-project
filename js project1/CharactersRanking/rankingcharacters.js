@@ -1,34 +1,28 @@
-const tableCells = document.querySelectorAll("td");
+$(document).ready(function() {
+  $.getJSON('otherAnimeData.json', function(data) {
+      let tableRows = '';
 
-tableCells.forEach(cell => {
-  cell.addEventListener("mouseover", function() {
-    this.classList.add("hovered");
+      $.each(data, function(index, anime) {
+          tableRows += `
+              <tr>
+                  <td>${anime.rank}</td>
+                  <td><img src="${anime.image}">${anime.title}</td>
+                  <td>${anime.type}</td>
+                  <td>${anime.score}</td>
+                  <td>N/A</td>
+              </tr>
+          `;
+      });
+
+      $('#animeTableBody').html(tableRows);
+
+      $('td').hover(
+          function() {
+              $(this).addClass('hovered');
+          },
+          function() {
+              $(this).removeClass('hovered');
+          }
+      );
   });
-  cell.addEventListener("mouseout", function() {
-    this.classList.remove("hovered");
-  });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('characters.json')
-        .then(response => response.json())
-        .then(data => {
-            const characters = data.characters;
-
-            const tableBody = document.querySelector('tbody');
-            characters.forEach(character => {
-                const row = document.createElement('tr');
-
-                row.innerHTML = `
-                    <td>${character.rank}</td>
-                    <td><img src="${character.image}">${character.name}</td>
-                    <td>${character.anime}</td>
-                    <td>${character.favorites}</td>
-                `;
-
-                tableBody.appendChild(row);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
 });
