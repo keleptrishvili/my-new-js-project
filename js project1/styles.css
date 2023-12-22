@@ -268,20 +268,27 @@ img {
 
     @media screen and (min-width: 1910px) {
         .filmbox2 {
+          display: flex;
           justify-content: center;
+          align-items: center;
         }
       
         .filmbox2 .image-container {
           display: flex;
           justify-content: space-between;
-          width: 80%; 
+          max-width: 80%; 
+          width: 100%;
           margin: 0 auto; 
         }
       
         .filmbox2 .image-container .image-wrapper {
-          width: 23%; 
+          flex: 1;
+          margin: 0 10px; 
+          max-width: 23%; 
+          text-align: center; 
         }
       }
+      
 }
 
 .info-overlay {
